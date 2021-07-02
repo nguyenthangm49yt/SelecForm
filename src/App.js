@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  
+import React from "react";
+import  MulipleSelect  from "./Components/MulipleSelect"
+import  BasicSelect  from "./Components/BasicSelect"
+const children = [];  
+const children2 = [];    
+for(let i = 10; i< 36 ;i++){
+   children.push(
+     {
+       title: i.toString(36) + i.toString() ,
+       isCheck: false
+     })
+     children2.push(
+      {
+        title: i.toString(36) + i.toString() ,
+        isCheck: false
+      })
 }
 
-export default App;
+  function App( ) {
+    
+    return (
+       
+      <div className = "container">
+       
+        <BasicSelect  placeholder = "please choose" data={children}></BasicSelect>
+       
+       
+       
+       <MulipleSelect  placeholder = "please choose" data={children2}></MulipleSelect>
+      
+        
+      </div>
+       
+    )
+  }
+
+  export default App;

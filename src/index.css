@@ -1,13 +1,110 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+   
+  justify-content: center;
+  
+  padding: 10px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  width: 50%;
 }
+
+.App {
+  font-family: sans-serif;
+ 
+}
+
+.container {
+  display: flex;
+}
+ 
+.select-input{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  position: relative;
+  min-height: 42px;
+  
+}
+.select-input::before {
+  position: absolute;
+  content: '';
+  right: 8px;
+  top: 18px;
+  border-top: 5px solid black;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+}
+
+.select-input--multiple {
+  height: auto;
+  min-height: 42px;
+  flex-wrap: wrap;
+}
+.custom-option{
+  flex: 1  ;
+  position: relative;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  
+}
+.select-list {
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: scroll;
+  border-top: none;
+}
+.selected-list {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 42px;
+
+ 
+}
+.selected-item {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  margin: 5px;
+}
+
+.selected-item-1{
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  margin: 5px;
+}
+
+.selected-item span {
+  margin-right: 5px;
+}
+
+.select-click{
+  flex:1;
+  height: 45px;
+}
+
+.select-item{
+  display: flex ;
+ 
+  width: 100%;
+}
+
+.select-item:hover{
+  background-color: #eee;
+ 
+}
+.title {
+  padding-left: 10px;
+    width: 95%;
+}
+ 
